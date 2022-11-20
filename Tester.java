@@ -11,6 +11,8 @@ public class Tester {
         User joe = new User("joesmith22", "customer");
         joe.getRole();
         assertTrue((joe.getRole() == "customer"), "customer");
+        assertTrue(joe.getUsername() == "joesmith22");
+        assertFalse(joe.getUsername() == "joEsmith22");
     }
 
     @Test

@@ -7,7 +7,9 @@ public class User {
         this.role = role;
     }
 
-    
+    public String getUsername() {
+        return this.username;
+    }
 
     public String getRole() {
         return this.role;
