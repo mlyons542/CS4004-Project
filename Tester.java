@@ -11,4 +11,12 @@ public class Tester {
         joe.getRole();
         assertTrue((joe.getRole() == "customer"), "customer");
     }
+    
+    @Test
+    public void checkBookWasAdded() {
+        Library uwon = new Library();
+        Department standard = new Department("standard");
+        standard.addBook(new Book("Biology Facts", "Joe Smith", "Biology"));
+        assertTrue(standard.getBookTitle("Biology Facts") == "Biology Facts");
+    }
 }
