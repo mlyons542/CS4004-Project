@@ -47,4 +47,20 @@ public class Library {
         return ans;
     }
 
+    public String necessarySubs() {
+        String ans = "";
+        for (Department department : departments) {
+            if (department.getSub() == true) {
+                ArrayList<String> subList = new ArrayList<>();
+                subList.add(department.getSubbedTo());
+                for (int i = 0; i < subList.size(); i++) {
+                    if (subList.get(i) == department.getSubbedTo()) {
+                        ans += "\n " + department.getSubbedTo() + " subscription is unnecessary, please ask other libraries to share this resource"; 
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+
 }
